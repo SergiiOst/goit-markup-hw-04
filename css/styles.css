@@ -87,7 +87,18 @@ img {
 .nav-link:active {
   color: #404bbf;
 }
-
+.nav-studio::after{
+  content: "";
+  display: flex;
+  width: 48px;
+  height: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 2px;
+  background: #404BBF;
+}
 .nav-link {
   font-weight: 500;
   line-height: 1.5;
@@ -121,9 +132,11 @@ img {
 }
 
 .hero {
-  background-color: #2e2f42;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)) , url(../images/people-office.jpg);
   padding-top: 188px;
   padding-bottom: 188px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -158,7 +171,7 @@ img {
   height: 56px;
   border: none;
 }
-
+/* ------Features Title hidden------------ */
 .features-title {
   position: absolute;
   width: 1px;
@@ -166,13 +179,12 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+/* ----------------------------------------- */
 .features-title {
   color: #2e2f42;
   text-align: center;
@@ -201,6 +213,17 @@ img {
   width: calc((100% - 72px) / 4);
 }
 
+.features-img {
+  display: flex;
+  width: 264px;
+height: 112px;
+align-items: center;
+justify-content: center;
+border-radius: 4px;
+border: 1px solid  #8E8F99;
+background: #F4F4FD;
+margin-bottom: 8px;
+}
 .features-list-title {
   color: #2e2f42;
   font-size: 20px;
@@ -247,17 +270,45 @@ img {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .img-text {
   color: #434455;
+  margin-bottom: 8px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.32px;
   text-align: center;
 }
+.team-icon-list{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.team-icon-item{
+  width: 40px;
+height: 40px;
 
+}
+.team-icon-link{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #4D5AE5;
+border-radius: 50%;
+}
+.team-icon{
+fill: #F4F4FD;
+}
+
+.team-icon-link:hover,
+.team-icon-link:focus {
+background-color: #404BBF;
+}
 .portfolio-title {
   color: #2e2f42;
   text-align: center;
